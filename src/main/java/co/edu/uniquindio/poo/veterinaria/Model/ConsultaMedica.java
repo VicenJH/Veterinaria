@@ -13,7 +13,20 @@ public class ConsultaMedica {
 
     }
 
-    
+    public AgendaCitaMedica getAgendacitamedica() {
+        return agendacitamedica;
+    }
+    public void setAgendacitamedica(){
+        AgendaCitaMedica agendacitamedica;
+    }
+
+    public String getDiagnostico() {
+        return diagnostico;
+    }
+    public String getTratamiento() {
+        return tratamiento;
+    }
+
 
 
 
