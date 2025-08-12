@@ -7,4 +7,12 @@ public class Veterinario extends Persona{
         super(nombre, apellido, telefono, direccion);
 
     }
+
+    public int getIdProfesional() {
+        return idProfesional;
+    }
+    public void setIdProfesional(int idProfesional) {
+        this.idProfesional = idProfesional;
+    }
+
 }
