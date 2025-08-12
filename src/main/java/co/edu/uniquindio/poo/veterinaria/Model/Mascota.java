@@ -5,12 +5,14 @@ public class Mascota {
     private String especie;
     private String raza;
     private int edad;
+    private int id;
 
-    public Mascota(String nombre, String especie, String raza, int edad) {
+    public Mascota(String nombre, String especie, String raza, int edad,int id) {
         this.nombre = nombre;
         this.especie = especie;
         this.raza = raza;
         this.edad = edad;
+        this.id = 0;
     }
 
     public String getNombre() {
@@ -43,5 +45,13 @@ public class Mascota {
 
     public void setEdad(int edad) {
         this.edad = edad;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
     }
 }

@@ -11,7 +11,7 @@ public class Veterinaria {
     LinkedList<Propietario>propietariosdemascotas;
     LinkedList<PersonalApoyo>PersonalApoyo;
 
-
+//constructor de la clase Veterinaria
     public  Veterinaria(String nombre, String direccion) {
         this.nombre = nombre;
         this.direccion = direccion;
@@ -19,7 +19,9 @@ public class Veterinaria {
         this.veteriniosclinica = new LinkedList<>();
         this.propietariosdemascotas = new LinkedList<>();
         this.PersonalApoyo = new LinkedList<>();
+        this.listademascotasenclinica = new LinkedList<>();
     }
+    // Getters y Setters
     public String getNombre() {
         return nombre;
     }
