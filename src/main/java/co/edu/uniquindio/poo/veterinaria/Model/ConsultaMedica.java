@@ -1,7 +1,7 @@
 package co.edu.uniquindio.poo.veterinaria.Model;
 
 public class ConsultaMedica {
-    private Agenda agenda;
+    private AgendaCitaMedica agendacitamedica;
     private String diagnostico;
     private String tratamiento;
 
@@ -9,7 +9,6 @@ public class ConsultaMedica {
         this.agendacitamedica = agendacitamedica;
         this.diagnostico = diagnostico;
         this.tratamiento = tratamiento;
-
 
     }
 
@@ -32,7 +31,6 @@ public class ConsultaMedica {
     public void setTratamiento(String tratamiento) {
         this.tratamiento = tratamiento;
     }
-    
 
 
 

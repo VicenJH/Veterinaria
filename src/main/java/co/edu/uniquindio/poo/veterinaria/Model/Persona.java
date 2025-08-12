@@ -5,7 +5,6 @@ public abstract class Persona {
     private String apellido;
     private String telefono;
     private String direccion;
-    private String idProfesional;
 
     public Persona(String nombre, String apellido, String telefono, String direccion) {
         this.nombre = nombre;

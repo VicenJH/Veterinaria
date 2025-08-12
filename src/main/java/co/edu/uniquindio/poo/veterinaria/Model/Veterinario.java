@@ -1,6 +1,7 @@
 package co.edu.uniquindio.poo.veterinaria.Model;
 
 public class Veterinario extends Persona{
+    public int idProfesional;
 
 
     public Veterinario(String nombre, String apellido, String telefono, String direccion,String idProfesional) {
