@@ -35,4 +35,80 @@ public class Veterinaria {
         this.direccion = direccion;
     }
 
+//Metodo para verificar si por el numero de telefono ya esta registrado el propietario
+    public boolean verificarPropietario(String telefono) {
+        for (Propietario propietario : propietariosdemascotas) {
+            if (propietario.getTelefono().equals(telefono)) {
+                return false;
+            }
+        }
+        return true;
+    }
+
+//metodo que verifica si el veterinario ya esta registrado por su id
+    public boolean verificarVeterianario(String idProfesional) {
+        for (Veterinario veterinario : veteriniosclinica) {
+            if (veterinario.getIdProfesional().equals(idProfesional)) {
+                return false;
+            }
+        }
+        return true;
+    }
+
+    // Metodo para registrar un propietario
+    public boolean registrarPropietario(Propietario propietario) {
+        if (verificarPropietario(propietario.getTelefono())) {
+            propietariosdemascotas.add(propietario);
+            return true;
+        }
+        return false;
+    }
+
+// Metodo para registrar un veterinario
+    public boolean registrarMascota(Mascota mascota) {
+        for (Mascota NuevaMascota : listademascotasenclinica) {
+            if (NuevaMascota.getId() == mascota.getId()) {
+                return false;
+            }
+        }
+        listademascotasenclinica.add(mascota);
+        return true;
+    }
+// Metodo para registrar un veterinario
+    public boolean registrarVeterinario(Veterinario veterinario) {
+        if (verificarVeterianario(veterinario.getIdProfesional())) {
+            veteriniosclinica.add(veterinario);
+            return true;
+        }
+        return false;
+    }
+    //metodo para asignar un id ramdon a la mascota
+    public void asignarIdMascota() {
+        for (Mascota mascota : listademascotasenclinica) {
+            if (mascota.getId() == 0) {
+                int idmascota;
+                do {
+                    idmascota = (int)(Math.random() * 9000000) + 1000000;
+                } while (idYaExiste(idmascota));
+
+                mascota.setId(idmascota);
+                return;
+            }
+        }
+    }
+
+    private boolean idYaExiste(int id) {
+        for (Mascota mascota : listademascotasenclinica) {
+            if (mascota.getId() == id) {
+                return true;
+            }
+        }
+        return false;
+    }
+
+
 }
+
+
+
+
