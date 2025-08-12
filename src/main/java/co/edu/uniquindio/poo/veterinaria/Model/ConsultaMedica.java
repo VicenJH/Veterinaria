@@ -29,6 +29,10 @@ public class ConsultaMedica {
     public String getTratamiento() {
         return tratamiento;
     }
+    public void setTratamiento(String tratamiento) {
+        this.tratamiento = tratamiento;
+    }
+    
 
 
 
