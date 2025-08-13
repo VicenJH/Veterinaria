@@ -6,6 +6,8 @@ public class Mascota {
     private String raza;
     private int edad;
     private int id;
+    HistoriaClinica historiaClinica;
+    Propietario propietario;
 
     public Mascota(String nombre, String especie, String raza, int edad,int id) {
         this.nombre = nombre;
@@ -13,6 +15,8 @@ public class Mascota {
         this.raza = raza;
         this.edad = edad;
         this.id = 0;
+        HistoriaClinica historiaClinica;
+        Propietario propietario;
     }
 
     public String getNombre() {
@@ -54,4 +58,21 @@ public class Mascota {
     public void setId(int id) {
         this.id = id;
     }
+
+    public HistoriaClinica getHistoriaClinica() {
+        return historiaClinica;
+    }
+
+    public void setHistoriaClinica(HistoriaClinica historiaClinica) {
+        this.historiaClinica = historiaClinica;
+    }
+
+    public Propietario getPropietario() {
+        return propietario;
+    }
+
+    public void setPropietario(Propietario propietario) {
+        this.propietario = propietario;
+    }
+
 }

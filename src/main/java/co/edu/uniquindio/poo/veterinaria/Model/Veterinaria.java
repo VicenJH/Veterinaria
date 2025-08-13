@@ -1,6 +1,8 @@
 package co.edu.uniquindio.poo.veterinaria.Model;
 
+import java.time.LocalDate;
 import java.util.LinkedList;
+import java.util.List;
 
 public class Veterinaria {
     String nombre;
@@ -10,6 +12,7 @@ public class Veterinaria {
     LinkedList<Veterinario>veteriniosclinica;
     LinkedList<Propietario>propietariosdemascotas;
     LinkedList<PersonalApoyo>PersonalApoyo;
+    private LinkedList<AgendaCitaMedica> citas;
 
 //constructor de la clase Veterinaria
     public  Veterinaria(String nombre, String direccion) {
@@ -35,7 +38,55 @@ public class Veterinaria {
         this.direccion = direccion;
     }
 
-//Metodo para verificar si por el numero de telefono ya esta registrado el propietario
+    public LinkedList<AgendaCitaMedica> getCitas() {
+        return citas;
+    }
+
+    public void setCitas(LinkedList<AgendaCitaMedica> citas) {
+        this.citas = citas;
+    }
+
+    public LinkedList<PersonalApoyo> getPersonalApoyo() {
+        return PersonalApoyo;
+    }
+
+    public void setPersonalApoyo(LinkedList<PersonalApoyo> personalApoyo) {
+        PersonalApoyo = personalApoyo;
+    }
+
+    public LinkedList<Propietario> getPropietariosdemascotas() {
+        return propietariosdemascotas;
+    }
+
+    public void setPropietariosdemascotas(LinkedList<Propietario> propietariosdemascotas) {
+        this.propietariosdemascotas = propietariosdemascotas;
+    }
+
+    public LinkedList<Veterinario> getVeteriniosclinica() {
+        return veteriniosclinica;
+    }
+
+    public void setVeteriniosclinica(LinkedList<Veterinario> veteriniosclinica) {
+        this.veteriniosclinica = veteriniosclinica;
+    }
+
+    public LinkedList<Mascota> getListademascotasenclinica() {
+        return listademascotasenclinica;
+    }
+
+    public void setListademascotasenclinica(LinkedList<Mascota> listademascotasenclinica) {
+        this.listademascotasenclinica = listademascotasenclinica;
+    }
+
+    public LinkedList<HistoriaClinica> getListahistoriasClinicas() {
+        return ListahistoriasClinicas;
+    }
+
+    public void setListahistoriasClinicas(LinkedList<HistoriaClinica> listahistoriasClinicas) {
+        ListahistoriasClinicas = listahistoriasClinicas;
+    }
+
+    //Metodo para verificar si por el numero de telefono ya esta registrado el propietario
     public boolean verificarPropietario(String telefono) {
         for (Propietario propietario : propietariosdemascotas) {
             if (propietario.getTelefono().equals(telefono)) {
@@ -45,7 +96,7 @@ public class Veterinaria {
         return true;
     }
 
-//metodo que verifica si el veterinario ya esta registrado por su id
+//Metodo que verifica si el veterinario ya esta registrado por su id
     public boolean verificarVeterianario(String idProfesional) {
         for (Veterinario veterinario : veteriniosclinica) {
             if (veterinario.getIdProfesional().equals(idProfesional)) {
@@ -96,6 +147,21 @@ public class Veterinaria {
             }
         }
     }
+// Metodo para agendar una nueva cita
+    public void agendarCita(AgendaCitaMedica cita) {
+        citas.add(cita);
+    }
+
+    // Metodo para buscar una dia por una fecha en especifico
+    public List<AgendaCitaMedica> buscarCitaPorDia(LocalDate fechaBuscada){
+        List<AgendaCitaMedica> citaResultado = new LinkedList<>();
+        for (AgendaCitaMedica cita : citas) {
+            if (cita.getFecha().equals(fechaBuscada)) {
+                citaResultado.add(cita);
+            }
+        }
+        return citaResultado;
+    }
 
     private boolean idYaExiste(int id) {
         for (Mascota mascota : listademascotasenclinica) {
@@ -105,6 +171,18 @@ public class Veterinaria {
         }
         return false;
     }
+
+public HistoriaClinica buscarHistoriaClinica(int idMascota){
+        for(HistoriaClinica historiaClinica: ListahistoriasClinicas){
+            if(historiaClinica.getMascota().getId() == idMascota){
+                return historiaClinica;
+            }
+        }
+        return null;
+}
+
+
+
 
 
 }
