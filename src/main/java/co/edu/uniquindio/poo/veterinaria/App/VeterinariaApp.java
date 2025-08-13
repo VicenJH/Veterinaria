@@ -1,4 +1,4 @@
-package co.edu.uniquindio.poo.veterinaria;
+package co.edu.uniquindio.poo.veterinaria.App;
 
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
@@ -7,12 +7,11 @@ import javafx.stage.Stage;
 
 import java.io.IOException;
 
-public class VeterinariaAppAplicacion extends Application {
+public class VeterinariaApp extends Application {
     @Override
     public void start(Stage stage) throws IOException {
-        FXMLLoader fxmlLoader = new FXMLLoader(VeterinariaAppAplicacion.class.getResource("hello-view.fxml"));
-        Scene scene = new Scene(fxmlLoader.load(), 320, 240);
-        stage.setTitle("Hello!");
+        FXMLLoader fxmlLoader = new FXMLLoader(VeterinariaApp.class.getResource("/co/edu/uniquindio/poo/veterinaria/VeterinariaApp.fxml"));
+        Scene scene = new Scene(fxmlLoader.load(), 320, 240);        stage.setTitle("Hello!");
         stage.setScene(scene);
         stage.show();
     }

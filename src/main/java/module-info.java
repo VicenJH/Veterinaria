@@ -12,5 +12,8 @@ module co.edu.uniquindio.poo.veterinaria {
     requires com.almasb.fxgl.all;
 
     opens co.edu.uniquindio.poo.veterinaria to javafx.fxml;
-    exports co.edu.uniquindio.poo.veterinaria;
+    exports co.edu.uniquindio.poo.veterinaria.App;
+    opens co.edu.uniquindio.poo.veterinaria.App to javafx.fxml;
+    exports co.edu.uniquindio.poo.veterinaria.ViewControllers;
+    opens co.edu.uniquindio.poo.veterinaria.ViewControllers to javafx.fxml;
 }

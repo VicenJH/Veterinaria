@@ -1,9 +1,9 @@
-package co.edu.uniquindio.poo.veterinaria;
+package co.edu.uniquindio.poo.veterinaria.ViewControllers;
 
 import javafx.fxml.FXML;
 import javafx.scene.control.Label;
 
-public class HelloController {
+public class VeterinariaAppViewController {
     @FXML
     private Label welcomeText;
 
