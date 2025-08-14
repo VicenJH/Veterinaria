@@ -5,14 +5,14 @@ import java.util.LinkedList;
 import java.util.List;
 
 public class Veterinaria {
-    String nombre;
-    String direccion;
-    LinkedList<HistoriaClinica> ListahistoriasClinicas;
+    private String nombre;
+    private String direccion;
+    private LinkedList<HistoriaClinica> ListahistoriasClinicas;
     LinkedList<Mascota> listademascotasenclinica;
     LinkedList<Veterinario> veteriniosclinica;
     LinkedList<Propietario> propietariosdemascotas;
     LinkedList<PersonalApoyo> PersonalApoyo;
-    private LinkedList<AgendaCitaMedica> citas;
+    LinkedList<AgendaCitaMedica> citas;
 
     //constructor de la clase Veterinaria
     public Veterinaria(String nombre, String direccion) {
@@ -23,6 +23,7 @@ public class Veterinaria {
         this.propietariosdemascotas = new LinkedList<>();
         this.PersonalApoyo = new LinkedList<>();
         this.listademascotasenclinica = new LinkedList<>();
+        this.citas = new LinkedList<>();
     }
 
     // Getters y Setters
