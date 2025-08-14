@@ -33,7 +33,15 @@ public class VeterinarioController {
 
     @FXML
     private void initialize() {
-        // Aquí puedes inicializar la tabla, listeners, etc.
+        colNombre.setCellValueFactory(data -> new SimpleStringProperty(data.getValue().getNombre()));
+        colApellido.setCellValueFactory(data -> new SimpleStringProperty(data.getValue().getApellido()));
+        colTelefono.setCellValueFactory(data -> new SimpleStringProperty(data.getValue().getTelefono()));
+        colDireccion.setCellValueFactory(data -> new SimpleStringProperty(data.getValue().getDireccion()));
+        colIdProfesional.setCellValueFactory(data -> new SimpleStringProperty(data.getValue().getIdProfesional()));
+
+        tablaVeterinarios.setItems(listaVeterinarios);
+
+        btnRegistrarVeterinario.setOnAction(e -> registrarVeterinario());
     }
 
     @FXML
