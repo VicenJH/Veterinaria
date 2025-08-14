@@ -2,16 +2,21 @@ package co.edu.uniquindio.poo.veterinaria.Model;
 
 import java.time.LocalDate;
 import java.time.LocalTime;
+import java.util.LinkedList;
 
 public class AgendaCitaMedica {
     private LocalDate fecha;
     private LocalTime hora;
     private String motivoConsulta;
+    private LinkedList<Veterinario> listaVeterinarios;
+
+
 
     public AgendaCitaMedica(LocalDate fecha, LocalTime hora, String motivoConsulta) {
         this.fecha = fecha;
         this.hora = hora;
         this.motivoConsulta = motivoConsulta;
+        this.listaVeterinarios = new LinkedList<>();
 
     }
     public LocalDate getFecha() {
@@ -31,6 +36,13 @@ public class AgendaCitaMedica {
     }
     public void setMotivoConsulta(String motivoConsulta) {
         this.motivoConsulta = motivoConsulta;
+    }
+
+    public LinkedList<Veterinario> getListaVeterinarios() {
+        return listaVeterinarios;
+    }
+    public void setListaVeterinarios(LinkedList<Veterinario> listaVeterinarios) {
+        this.listaVeterinarios = listaVeterinarios;
     }
 
 }

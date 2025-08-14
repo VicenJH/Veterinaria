@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox alignment="TOP_CENTER" prefHeight="500.0" prefWidth="860.0" spacing="22.0"
+      style="-fx-background-color: linear-gradient(to bottom, #E8F9F1, #FFFFFF);"
+      xmlns="http://javafx.com/javafx/23.0.1"
+      xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="co.edu.uniquindio.poo.veterinaria.ViewControllers.RegistrarVeterinarioViewController">
+
+    <padding>
+        <Insets top="20" right="20" bottom="20" left="20"/>
+    </padding>
+
+    <!-- Título -->
+    <Label text="🐶 Registro de Veterinarios 🐱"
+           style="-fx-text-fill: #1F6F54; -fx-font-weight: bold;">
+        <font>
+            <Font size="30.0"/>
+        </font>
+    </Label>
+
+    <!-- Formulario -->
+    <AnchorPane prefHeight="180.0" prefWidth="820.0"
+                style="-fx-background-color: white; -fx-background-radius: 18; -fx-border-radius: 18;
+                       -fx-border-color: #A5E5C4; -fx-border-width: 2;
+                       -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.15), 8, 0, 0, 3);">
+        <children>
+            <VBox alignment="CENTER" spacing="12.0"
+                  AnchorPane.topAnchor="12.0" AnchorPane.leftAnchor="15.0"
+                  AnchorPane.rightAnchor="15.0" AnchorPane.bottomAnchor="12.0">
+
+                <TextField fx:id="txtNombre" promptText="✏ Nombre"
+                           style="-fx-background-radius: 10; -fx-border-radius: 10; -fx-padding: 6 10 6 10;"/>
+                <TextField fx:id="txtApellido" promptText="👤 Apellido"
+                           style="-fx-background-radius: 10; -fx-border-radius: 10; -fx-padding: 6 10 6 10;"/>
+                <TextField fx:id="txtTelefono" promptText="📞 Teléfono"
+                           style="-fx-background-radius: 10; -fx-border-radius: 10; -fx-padding: 6 10 6 10;"/>
+                <TextField fx:id="txtDireccion" promptText="🏠 Dirección"
+                           style="-fx-background-radius: 10; -fx-border-radius: 10; -fx-padding: 6 10 6 10;"/>
+
+                <Button fx:id="btnRegistrarVeterinario" text="✅ Registrar Veterinario"
+                        style="-fx-background-color: #2ECC71; -fx-text-fill: white;
+                               -fx-font-weight: bold; -fx-background-radius: 25; -fx-border-radius: 25;
+                               -fx-padding: 8 18 8 18; -fx-cursor: hand;"
+                        onMouseEntered="event -> btnRegistrarVeterinario.setStyle('-fx-background-color: #27AE60; -fx-text-fill: white; -fx-background-radius: 25;')"
+                        onMouseExited="event -> btnRegistrarVeterinario.setStyle('-fx-background-color: #2ECC71; -fx-text-fill: white; -fx-background-radius: 25;')"/>
+            </VBox>
+        </children>
+    </AnchorPane>
+
+    <!-- Tabla de veterinarios -->
+    <AnchorPane prefHeight="260.0" prefWidth="820.0"
+                style="-fx-background-color: white; -fx-background-radius: 18; -fx-border-radius: 18;
+                       -fx-border-color: #A5E5C4; -fx-border-width: 2;
+                       -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.15), 8, 0, 0, 3);">
+        <children>
+            <TableView fx:id="tablaVeterinarios"
+                       AnchorPane.topAnchor="10.0"
+                       AnchorPane.leftAnchor="10.0"
+                       AnchorPane.rightAnchor="10.0"
+                       AnchorPane.bottomAnchor="10.0"
+                       prefWidth="800.0">
+
+                <columns>
+                    <TableColumn fx:id="colNombre" text="Nombre" prefWidth="150.0"/>
+                    <TableColumn fx:id="colApellido" text="Apellido" prefWidth="150.0"/>
+                    <TableColumn fx:id="colTelefono" text="Teléfono" prefWidth="150.0"/>
+                    <TableColumn fx:id="colDireccion" text="Dirección" prefWidth="230.0"/>
+                    <TableColumn fx:id="colIdProfesional" text="ID Profesional" prefWidth="100.0"/>
+                </columns>
+            </TableView>
+        </children>
+    </AnchorPane>
+
+</VBox>

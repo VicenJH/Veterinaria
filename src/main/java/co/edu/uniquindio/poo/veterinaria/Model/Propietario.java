@@ -9,6 +9,7 @@ public class Propietario extends Persona    {
     public Propietario(String nombre, String apellido, String telefono, String direccion, String idPropietario) {
         super(nombre, apellido, telefono, direccion);
         this.mascotaspropias=new LinkedList<>();
+        this.idPropietario = idPropietario;
 
     }
     public LinkedList getMascotasPropias() {
@@ -30,4 +31,5 @@ public class Propietario extends Persona    {
     public void setIdPropietario(String idPropietario) {
         this.idPropietario = idPropietario;
     }
+
 }
