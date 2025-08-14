@@ -19,7 +19,6 @@
         <Insets bottom="32" left="32" right="32" top="32"/>
     </padding>
 
-    <!-- Título -->
     <Text style="-fx-fill: #226B5A; -fx-font-weight: bold;"
           text="🐾 Bienvenido a la Clínica Veterinaria Con Vicente 🐾">
         <font>
@@ -27,12 +26,10 @@
         </font>
     </Text>
 
-    <!-- Subtítulo -->
     <Label fx:id="welcomeText"
            style="-fx-text-fill: #2E7D6E; -fx-font-size: 16px; -fx-font-weight: bold;"
            text="Cuidamos a tus mascotas con cariño y profesionalismo"/>
 
-    <!-- Panel central -->
     <AnchorPane prefHeight="300.0" prefWidth="760.0"
                 style="-fx-background-color: white; -fx-background-radius: 20; -fx-border-radius: 20;
                        -fx-border-color: #9BE7C4; -fx-border-width: 2;
@@ -46,7 +43,6 @@
                     <font><Font size="18.0"/></font>
                 </Text>
 
-                <!-- Primera fila de botones -->
                 <HBox alignment="CENTER" spacing="16.0">
                     <Button prefWidth="200"
                             style="-fx-background-color: #2ECC71; -fx-text-fill: white;
@@ -62,7 +58,6 @@
                             text="📋 Personal de Apoyo"/>
                 </HBox>
 
-                <!-- Segunda fila solo para el botón Salir -->
                 <HBox alignment="CENTER">
                     <Button prefWidth="200"
                             style="-fx-background-color: #E74C3C; -fx-text-fill: white;

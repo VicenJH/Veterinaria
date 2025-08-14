@@ -20,7 +20,6 @@
         <Insets top="20" right="20" bottom="20" left="20"/>
     </padding>
 
-    <!-- Título -->
     <Label text="🐶 Registro de Veterinarios 🐱"
            style="-fx-text-fill: #1F6F54; -fx-font-weight: bold;">
         <font>
@@ -28,7 +27,6 @@
         </font>
     </Label>
 
-    <!-- Formulario -->
     <AnchorPane prefHeight="180.0" prefWidth="820.0"
                 style="-fx-background-color: white; -fx-background-radius: 18; -fx-border-radius: 18;
                        -fx-border-color: #A5E5C4; -fx-border-width: 2;
@@ -57,7 +55,6 @@
         </children>
     </AnchorPane>
 
-    <!-- Tabla de veterinarios -->
     <AnchorPane prefHeight="260.0" prefWidth="820.0"
                 style="-fx-background-color: white; -fx-background-radius: 18; -fx-border-radius: 18;
                        -fx-border-color: #A5E5C4; -fx-border-width: 2;

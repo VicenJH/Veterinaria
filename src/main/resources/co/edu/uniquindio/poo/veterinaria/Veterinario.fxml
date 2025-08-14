@@ -22,14 +22,12 @@
         <Insets top="20" right="20" bottom="20" left="20"/>
     </padding>
 
-    <!-- Título -->
     <Text style="-fx-fill: #226B5A; -fx-font-weight: bold;" text="🐾 Panel del Veterinario">
         <font>
             <Font size="34.0"/>
         </font>
     </Text>
 
-    <!-- =================== Sección Historial Clínico =================== -->
     <AnchorPane prefHeight="250.0" prefWidth="860.0"
                 style="-fx-background-color: white; -fx-background-radius: 20; -fx-border-radius: 20;
                        -fx-border-color: #9BE7C4; -fx-border-width: 2;
@@ -42,7 +40,6 @@
                 <Label text="📋 Historial Clínico de Mascota"
                        style="-fx-text-fill: #2E7D6E; -fx-font-size: 18px; -fx-font-weight: bold;"/>
 
-                <!-- Buscador -->
                 <HBox alignment="CENTER" spacing="10">
                     <TextField fx:id="txtBuscarMascota" promptText="Ingrese nombre o ID de mascota"
                                style="-fx-background-radius: 20; -fx-border-radius: 20; -fx-border-color: #9BE7C4;"/>
@@ -51,7 +48,6 @@
                                    -fx-background-radius: 20; -fx-border-radius: 20;"/>
                 </HBox>
 
-                <!-- Tabla de historial -->
                 <TableView fx:id="tablaHistorial" prefHeight="150">
                     <columns>
                         <TableColumn fx:id="colFecha" text="Fecha" prefWidth="120"/>
@@ -63,7 +59,6 @@
         </children>
     </AnchorPane>
 
-    <!-- =================== Sección Citas =================== -->
     <AnchorPane prefHeight="250.0" prefWidth="860.0"
                 style="-fx-background-color: white; -fx-background-radius: 20; -fx-border-radius: 20;
                        -fx-border-color: #9BE7C4; -fx-border-width: 2;
@@ -89,7 +84,6 @@
         </children>
     </AnchorPane>
 
-    <!-- Botón Volver -->
     <Button text="⬅ Volver"
             style="-fx-background-color: #E74C3C; -fx-text-fill: white;
                    -fx-background-radius: 28; -fx-border-radius: 28;

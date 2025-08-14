@@ -22,7 +22,6 @@
         <Insets bottom="20" left="20" right="20" top="20" />
     </padding>
 
-    <!-- Título -->
     <Text style="-fx-fill: #226B5A; -fx-font-weight: bold;"
           text="🐾 Registro de Propietarios 🐾">
         <font>
@@ -30,7 +29,6 @@
         </font>
     </Text>
 
-    <!-- Formulario -->
     <AnchorPane prefHeight="250.0" prefWidth="850.0"
                 style="-fx-background-color: white; -fx-background-radius: 20;
                        -fx-border-radius: 20; -fx-border-color: #9BE7C4; -fx-border-width: 2;
@@ -42,7 +40,6 @@
                   AnchorPane.rightAnchor="30.0"
                   AnchorPane.topAnchor="20.0">
 
-                <!-- Fila 1: ID y Nombre -->
                 <HBox spacing="15.0">
                     <VBox spacing="4.0">
                         <Label text="ID:" style="-fx-font-weight: bold; -fx-text-fill: #2E7D6E;" />
@@ -56,7 +53,6 @@
                     </VBox>
                 </HBox>
 
-                <!-- Fila 2: Apellido y Teléfono -->
                 <HBox spacing="15.0">
                     <VBox spacing="4.0">
                         <Label text="Apellido:" style="-fx-font-weight: bold; -fx-text-fill: #2E7D6E;" />
@@ -70,14 +66,12 @@
                     </VBox>
                 </HBox>
 
-                <!-- Fila 3: Dirección -->
                 <VBox spacing="4.0">
                     <Label text="Dirección:" style="-fx-font-weight: bold; -fx-text-fill: #2E7D6E;" />
                     <TextField fx:id="txtDireccion" promptText="Ingrese dirección"
                                style="-fx-background-radius: 10; -fx-border-radius: 10;" />
                 </VBox>
 
-                <!-- Botones -->
                 <HBox alignment="CENTER" spacing="15.0" style="-fx-padding: 10 0 0 0;">
                     <Button text="💾 Registrar" fx:id="btnRegistrar"
                             style="-fx-background-color: #2ECC71; -fx-text-fill: white;
@@ -94,7 +88,6 @@
         </children>
     </AnchorPane>
 
-    <!-- Tabla de propietarios -->
     <AnchorPane prefHeight="250.0" prefWidth="850.0"
                 style="-fx-background-color: white; -fx-background-radius: 20;
                        -fx-border-radius: 20; -fx-border-color: #9BE7C4; -fx-border-width: 2;
@@ -116,7 +109,6 @@
         </children>
     </AnchorPane>
 
-    <!-- Botón Salir -->
     <Button text="🚪 Salir" fx:id="btnSalir"
             style="-fx-background-color: #E74C3C; -fx-text-fill: white;
                    -fx-font-size: 14px; -fx-font-weight: bold;

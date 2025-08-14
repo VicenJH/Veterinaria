@@ -20,7 +20,6 @@
         <Insets top="20" right="20" bottom="20" left="20"/>
     </padding>
 
-    <!-- Título -->
     <Label text="🐾 Registrar Mascota 🐾"
            style="-fx-text-fill: #226B5A; -fx-font-weight: bold;">
         <font>
@@ -28,7 +27,6 @@
         </font>
     </Label>
 
-    <!-- Formulario -->
     <AnchorPane prefHeight="140.0" prefWidth="800.0"
                 style="-fx-background-color: white; -fx-background-radius: 15; -fx-border-radius: 15;
                        -fx-border-color: #9BE7C4; -fx-border-width: 2;
@@ -46,7 +44,6 @@
                            style="-fx-background-radius: 8; -fx-border-radius: 8;"/>
                 <TextField fx:id="txtEdad" promptText="Edad"
                            style="-fx-background-radius: 8; -fx-border-radius: 8;"/>
-                <!-- ID se asigna automáticamente -->
                 <Button fx:id="btnRegistrarMascota" text="Registrar Mascota"
                         style="-fx-background-color: #2ECC71; -fx-text-fill: white;
                                -fx-font-weight: bold; -fx-background-radius: 20; -fx-border-radius: 20;
@@ -55,7 +52,6 @@
         </children>
     </AnchorPane>
 
-    <!-- Tabla de mascotas -->
     <AnchorPane prefHeight="260.0" prefWidth="800.0"
                 style="-fx-background-color: white; -fx-background-radius: 15; -fx-border-radius: 15;
                        -fx-border-color: #9BE7C4; -fx-border-width: 2;

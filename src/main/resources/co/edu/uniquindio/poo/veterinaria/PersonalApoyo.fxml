@@ -19,7 +19,6 @@
         <Insets bottom="32" left="32" right="32" top="32" />
     </padding>
 
-    <!-- Título -->
     <Text style="-fx-fill: #226B5A; -fx-font-weight: bold;"
           text="🐾 Panel del Personal de Apoyo 🐾">
         <font>
@@ -27,11 +26,9 @@
         </font>
     </Text>
 
-    <!-- Subtítulo -->
     <Label style="-fx-text-fill: #2E7D6E; -fx-font-size: 16px; -fx-font-weight: bold;"
            text="Gestione registros y consultas de manera rápida y sencilla" />
 
-    <!-- Panel central -->
     <AnchorPane prefHeight="340.0" prefWidth="760.0"
                 style="-fx-background-color: white; -fx-background-radius: 20;
                        -fx-border-radius: 20; -fx-border-color: #9BE7C4; -fx-border-width: 2;
@@ -50,7 +47,6 @@
                     </font>
                 </Text>
 
-                <!-- Primera fila -->
                 <HBox alignment="CENTER" spacing="16.0">
                     <Button style="-fx-background-color: #2ECC71; -fx-text-fill: white;
                                     -fx-font-size: 15px; -fx-font-weight: bold;
@@ -64,7 +60,6 @@
                             text="🐶 Registrar Mascota" />
                 </HBox>
 
-                <!-- Segunda fila -->
                 <HBox alignment="CENTER" spacing="16.0">
                     <Button style="-fx-background-color: #2ECC71; -fx-text-fill: white;
                                     -fx-font-size: 15px; -fx-font-weight: bold;
@@ -78,7 +73,6 @@
                             text="📅 Agendar Consulta" />
                 </HBox>
 
-                <!-- Botón salir -->
                 <HBox alignment="CENTER" spacing="16.0" style="-fx-padding: 20 0 0 0;">
                     <Button style="-fx-background-color: #E74C3C; -fx-text-fill: white;
                                     -fx-font-size: 15px; -fx-font-weight: bold;
