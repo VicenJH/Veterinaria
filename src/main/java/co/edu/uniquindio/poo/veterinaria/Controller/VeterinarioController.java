@@ -1,5 +1,9 @@
 package co.edu.uniquindio.poo.veterinaria.Controller;
 
+import co.edu.uniquindio.poo.veterinaria.Model.Veterinario;
+import javafx.beans.property.SimpleStringProperty;
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.TableColumn;
