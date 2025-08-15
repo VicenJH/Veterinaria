@@ -10,6 +10,7 @@ module co.edu.uniquindio.poo.veterinaria {
     requires org.kordamp.bootstrapfx.core;
     requires eu.hansolo.tilesfx;
     requires com.almasb.fxgl.all;
+    requires java.desktop;
 
     opens co.edu.uniquindio.poo.veterinaria to javafx.fxml;
     exports co.edu.uniquindio.poo.veterinaria.App;
