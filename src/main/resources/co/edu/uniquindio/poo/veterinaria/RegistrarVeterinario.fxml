@@ -49,8 +49,9 @@
                         style="-fx-background-color: #2ECC71; -fx-text-fill: white;
                                -fx-font-weight: bold; -fx-background-radius: 25; -fx-border-radius: 25;
                                -fx-padding: 8 18 8 18; -fx-cursor: hand;"
-                        onMouseEntered="event -> btnRegistrarVeterinario.setStyle('-fx-background-color: #27AE60; -fx-text-fill: white; -fx-background-radius: 25;')"
-                        onMouseExited="event -> btnRegistrarVeterinario.setStyle('-fx-background-color: #2ECC71; -fx-text-fill: white; -fx-background-radius: 25;')"/>
+                        >
+
+                </Button>
             </VBox>
         </children>
     </AnchorPane>
