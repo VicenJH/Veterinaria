@@ -1,16 +1,13 @@
-package co.edu.uniquindio.poo.veterinaria.Controller;
+package co.edu.uniquindio.poo.veterinaria.ViewControllers;
 
 import co.edu.uniquindio.poo.veterinaria.Model.Veterinario;
 import javafx.beans.property.SimpleStringProperty;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
-import javafx.scene.control.Button;
-import javafx.scene.control.TableColumn;
-import javafx.scene.control.TableView;
-import javafx.scene.control.TextField;
+import javafx.scene.control.*;
 
-public class VeterinarioController {
+public class RegistrarVeterinarioViewController {
 
     @FXML
     private TextField txtNombre;
@@ -23,17 +20,19 @@ public class VeterinarioController {
     @FXML
     private Button btnRegistrarVeterinario;
     @FXML
-    private TableView<?> tablaVeterinarios;
+    private TableView<Veterinario> tablaVeterinarios;
     @FXML
-    private TableColumn<?, ?> colNombre;
+    private TableColumn<Veterinario, String> colNombre;
     @FXML
-    private TableColumn<?, ?> colApellido;
+    private TableColumn<Veterinario, String> colApellido;
     @FXML
-    private TableColumn<?, ?> colTelefono;
+    private TableColumn<Veterinario, String> colTelefono;
     @FXML
-    private TableColumn<?, ?> colDireccion;
+    private TableColumn<Veterinario, String> colDireccion;
     @FXML
-    private TableColumn<?, ?> colIdProfesional;
+    private TableColumn<Veterinario, String> colIdProfesional;
+
+    private ObservableList<Veterinario> listaVeterinarios = FXCollections.observableArrayList();
 
     @FXML
     private void initialize() {
@@ -50,6 +49,18 @@ public class VeterinarioController {
 
     @FXML
     private void registrarVeterinario() {
-        // Lógica para registrar un veterinario usando los campos de texto
+        String nombre = txtNombre.getText();
+        String apellido = txtApellido.getText();
+        String telefono = txtTelefono.getText();
+        String direccion = txtDireccion.getText();
+        String idProfesional = "ID" + (listaVeterinarios.size() + 1);
+
+        Veterinario nuevoVeterinario = new Veterinario(nombre, apellido, telefono, direccion, idProfesional);
+        listaVeterinarios.add(nuevoVeterinario);
+
+        txtNombre.clear();
+        txtApellido.clear();
+        txtTelefono.clear();
+        txtDireccion.clear();
     }
 }
