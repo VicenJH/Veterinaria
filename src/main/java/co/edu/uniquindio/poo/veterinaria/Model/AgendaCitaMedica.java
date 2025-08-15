@@ -44,5 +44,8 @@ public class AgendaCitaMedica {
     public void setListaVeterinarios(LinkedList<Veterinario> listaVeterinarios) {
         this.listaVeterinarios = listaVeterinarios;
     }
+    public void estupido(){
+        System.out.println("pille imbecil");
+    }
 
 }
